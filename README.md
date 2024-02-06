@@ -14,21 +14,30 @@ With integrated web scraping, Graphlit ingests existing websites by sitemap. Wit
 
 Use any content with RAG conversations, even images or websites described with the GPT-4 Vision model.
 
+### Features:
+
 ✅ API first: Made for app developers, not data scientists
+
 ✅ Graph-based: via LLMs, we build a knowledge graph from your unstructured data
+
 ✅ Multi-modal RAG: not just PDFs and web pages, we support audio, video and images
+
 ✅ Model-agnostic: we handle prompted retrieval with models from OpenAI, Anthropic, Meta, Mistral, etc.
+
 ✅ Managed cloud-native platform: fully automated unstructured data ETL pipelines
+
 ✅ No assembly required: no need for Langchain, Pinecone, S3, etc.
+
 ✅ Built-in multi-tenancy, semantic search, storage and workflow automation
 
-✍️ Read more about use cases for Graphlit:
+### ✍️ Read more about use cases for Graphlit:
 
 - [Slack audio alerts](https://www.graphlit.com/blog/slack-audio-alerts)
 - [AI-generated podcasts](https://www.graphlit.com/blog/gpt-to-audio)
 - [GPT-4 Vision for image analysis](https://www.graphlit.com/blog/multimodal-content-publishing)
 - [LLM tools for data extraction](https://www.graphlit.com/blog/address-extraction)
 - [Reddit market intelligence with LLM](https://www.graphlit.com/blog/exploring-market-intelligence-data-with-llms)
+
 
 
 🔥 Get started with our [API documentation](https://docs.graphlit.dev/).
