@@ -1,5 +1,7 @@
 # Graphlit
 
+[![npm version](https://badge.fury.io/js/graphlit-client.svg)](https://badge.fury.io/js/graphlit-client) [![PyPI version](https://badge.fury.io/py/graphlit-client.svg)](https://badge.fury.io/py/graphlit-client)
+
 If you're building AI copilots, chatbots or other vertical AI apps, [Graphlit](https://www.graphlit.com) simplifies and accelerates your development.
 
 Compared to existing Open Source solutions like LangChain or LlamaIndex, which require the DIY combination of vector databases, LLM embeddings, cloud storage and data pipelines, our managed Graphlit platform handles your AI and data infrastructure for you.
@@ -29,6 +31,23 @@ Use any content with RAG conversations, even images or websites described with t
 ✅ No assembly required: no need for Langchain, Pinecone, S3, etc.
 
 ✅ Built-in multi-tenancy, semantic search, storage and workflow automation
+
+```python
+from graphlit import Graphlit
+from graphlit_api import *
+
+await graphlit.client.ingest_uri(
+  uri="https://www.graphlit.com"
+)
+
+response = await graphlit.client.prompt_conversation(
+  prompt="How can Graphlit accelerate my Generative AI app development?"
+)
+
+message = response.prompt_conversation.message.message
+
+print(message)
+```
 
 ### ✍️ Read more about use cases for Graphlit:
 
