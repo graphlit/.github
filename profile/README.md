@@ -16,21 +16,7 @@ With integrated web scraping, Graphlit ingests existing websites by sitemap. Wit
 
 Use any content with RAG conversations, even images or websites described with the GPT-4 Vision model.
 
-### Features:
-
-✅ API first: Made for app developers, not data scientists
-
-✅ Graph-based: via LLMs, we build a knowledge graph from your unstructured data
-
-✅ Multi-modal RAG: not just PDFs and web pages, we support audio, video and images
-
-✅ Model-agnostic: we handle prompted retrieval with models from OpenAI, Anthropic, Meta, Mistral, etc.
-
-✅ Managed cloud-native platform: fully automated unstructured data ETL pipelines
-
-✅ No assembly required: no need for Langchain, Pinecone, S3, etc.
-
-✅ Built-in multi-tenancy, semantic search, storage and workflow automation
+## Example
 
 ```python
 from graphlit import Graphlit
@@ -49,6 +35,24 @@ message = response.prompt_conversation.message.message
 print(message)
 ```
 
+![Accelerate your Generative AI app development](https://github.com/graphlit/.github/assets/13594550/c0142ee5-3cf1-4f30-a14f-1d2c31ed396b)
+
+### Features:
+
+✅ API first: Made for app developers, not data scientists
+
+✅ Graph-based: via LLMs, we build a knowledge graph from your unstructured data
+
+✅ Multi-modal RAG: not just PDFs and web pages, we support audio, video and images
+
+✅ Model-agnostic: we handle prompted retrieval with models from OpenAI, Anthropic, Meta, Mistral, etc.
+
+✅ Managed cloud-native platform: fully automated unstructured data ETL pipelines
+
+✅ No assembly required: no need for Langchain, Pinecone, S3, etc.
+
+✅ Built-in multi-tenancy, semantic search, storage and workflow automation
+
 ### ✍️ Read more about use cases for Graphlit:
 
 - [Slack audio alerts](https://www.graphlit.com/blog/slack-audio-alerts)
@@ -57,7 +61,13 @@ print(message)
 - [LLM tools for data extraction](https://www.graphlit.com/blog/address-extraction)
 - [Reddit market intelligence with LLM](https://www.graphlit.com/blog/exploring-market-intelligence-data-with-llms)
 
+### Try one of our sample applications
 
+- [Upload and Chat with Files, with Citations](https://graphlit-samples-chat-file-citations.streamlit.app/)
+- [Extract Website Topics](https://graphlit-samples-extract-website-topics.streamlit.app/)
+- [Publish GitHub Issues Report](https://graphlit-samples-publish-issues-feed.streamlit.app/)
+
+All sample applications can be found in our [GitHub Repo](https://github.com/graphlit/graphlit-samples).
 
 🔥 Get started with our [API documentation](https://docs.graphlit.dev/).
 
