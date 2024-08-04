@@ -1,6 +1,6 @@
 # Graphlit
 
-[![npm version](https://badge.fury.io/js/graphlit-client.svg)](https://badge.fury.io/js/graphlit-client) [![PyPI version](https://badge.fury.io/py/graphlit-client.svg)](https://badge.fury.io/py/graphlit-client)
+[![npm version](https://badge.fury.io/js/graphlit-client.svg)](https://badge.fury.io/js/graphlit-client) [![PyPI version](https://badge.fury.io/py/graphlit-client.svg)](https://badge.fury.io/py/graphlit-client) [![NuGet version](https://badge.fury.io/nu/Graphlit.svg)](https://badge.fury.io/nu/Graphlit)
 
 If you're building AI copilots, chatbots or other vertical AI apps, [Graphlit](https://www.graphlit.com) simplifies and accelerates your development.
 
