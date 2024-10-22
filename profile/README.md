@@ -22,6 +22,8 @@ Use any content with RAG conversations, even images or websites described with t
 from graphlit import Graphlit
 from graphlit_api import *
 
+graphlit = Graphlit()
+
 await graphlit.client.ingest_uri(
   uri="https://www.graphlit.com"
 )
