@@ -1,79 +1,163 @@
-# Graphlit
+# 🧠 Graphlit – The semantic memory platform for AI
 
-[![npm version](https://badge.fury.io/js/graphlit-client.svg)](https://badge.fury.io/js/graphlit-client) [![PyPI version](https://badge.fury.io/py/graphlit-client.svg)](https://badge.fury.io/py/graphlit-client) [![NuGet version](https://badge.fury.io/nu/Graphlit.svg)](https://badge.fury.io/nu/Graphlit)
+**Context engineering for developers.**
 
-If you're building AI copilots, chatbots or other vertical AI apps, [Graphlit](https://www.graphlit.com) simplifies and accelerates your development.
+Ingest any content, extract what matters, give your AI the memory it needs.
 
-Compared to existing Open Source solutions like LangChain or LlamaIndex, which require the DIY combination of vector databases, LLM embeddings, cloud storage and data pipelines, our managed Graphlit platform handles your AI and data infrastructure for you.
+[![Start Free](https://img.shields.io/badge/Start_Free-5_Minutes_to_First_Search-6366f1?style=for-the-badge)](https://portal.graphlit.dev/)
+[![Documentation](https://img.shields.io/badge/Docs-docs.graphlit.dev-0ea5e9?style=for-the-badge)](https://docs.graphlit.dev)
+[![Discord](https://img.shields.io/discord/1095189481335816243?label=Discord&logo=discord&style=for-the-badge)](https://discord.gg/ygFmfjy3Qx)
 
-No need to be limited by the OpenAI Assistants API - no file size limits (on all tiers), or storage limitations (on the Growth tier).
+---
 
-💸 Graphlit is **free** to use, up to 1GB of content, and [paid plans](https://www.graphlit.com/#pricing) start at $49/mo + credit usage.
+## What is Graphlit?
 
-💡 [Signup today](https://portal.graphlit.dev/), and you can be ingesting data and having LLM conversations within minutes.
+Graphlit is a **cloud-native platform** that gives AI applications semantic memory. Not just vector search – real knowledge retrieval with context, relationships, and understanding.
 
-With integrated web scraping, Graphlit ingests existing websites by sitemap. With built-in audio transcription, it indexes podcasts, videos and meeting recordings. Any format of unstructured data will be made searchable, via metadata filtering and text and image embeddings. Slack, Notion, Google Mail and Microsoft Outlook email are supported as data feeds. Create automated LLM-generated alerts on people, places, companies or topics found in your content.
+**One API** for the complete stack: content ingestion, extraction, enrichment, storage, and retrieval.
 
-Use any content with RAG conversations, even images or websites described with the GPT-4 Vision model.
+```typescript
+import { Graphlit } from "graphlit-client";
 
-## Example
+const client = new Graphlit();
 
-```python
-from graphlit import Graphlit
-from graphlit_api import *
+// Ingest and automatically extract entities, relationships
+await client.ingestUri("https://example.com/report.pdf");
 
-graphlit = Graphlit()
+// Semantic search across all your content
+const results = await client.queryContents({
+  search: "Q4 revenue concerns enterprise pricing"
+});
 
-await graphlit.client.ingest_uri(
-  uri="https://www.graphlit.com"
-)
-
-response = await graphlit.client.prompt_conversation(
-  prompt="How can Graphlit accelerate my Generative AI app development?"
-)
-
-message = response.prompt_conversation.message.message
-
-print(message)
+// Chat with your data using RAG
+await client.streamAgent(
+  "What are the key pricing concerns from enterprise customers?",
+  (event) => console.log(event.message)
+);
 ```
 
-![Accelerate your Generative AI app development](https://github.com/graphlit/.github/assets/13594550/c0142ee5-3cf1-4f30-a14f-1d2c31ed396b)
+---
 
-### Features:
+## Why Graphlit?
 
-✅ API first: Made for app developers, not data scientists
+Building semantic memory is hard. Maintaining it in production is harder.
 
-✅ Graph-based: via LLMs, we build a knowledge graph from your unstructured data
+| Typical Solutions | 🚀 Graphlit |
+|---|---|
+| Just vectors – no semantic memory | **Semantic memory platform** |
+| Basic pipelines | **Complete ingestion-to-retrieval stack** |
+| Limited multimodal or text-only | **True multimodal** from day one |
+| New to production | **Years of production hardening** |
 
-✅ Multi-modal RAG: not just PDFs and web pages, we support audio, video and images
+**Save weeks of engineering time.** Skip the infrastructure. Ship features, not glue code.
 
-✅ Model-agnostic: we handle prompted retrieval with models from OpenAI, Anthropic, Meta, Mistral, etc.
+---
 
-✅ Managed cloud-native platform: fully automated unstructured data ETL pipelines
+## ✨ What You Get
 
-✅ No assembly required: no need for Langchain, Pinecone, S3, etc.
+### 📥 Ingest Anything
+- **Documents**: PDF, DOCX, PPTX, Excel, Markdown
+- **Media**: Audio transcription, video processing, image analysis
+- **Web**: Scraping, RSS feeds, sitemaps
+- **Platforms**: Slack, Gmail, Notion, GitHub, Jira, Linear, SharePoint, and more
+- **Cloud Storage**: S3, Azure Blob, Google Drive, Dropbox, OneDrive, Box
 
-✅ Built-in multi-tenancy, semantic search, storage and workflow automation
+### 🧠 Automatic Extraction
+- Entity recognition and linking
+- Relationship mapping
+- OCR and visual object detection
+- Audio transcription with speaker diarization
+- Automated summarization
 
-### ✍️ Read more about use cases for Graphlit:
+### 🔍 Smart Retrieval
+- Semantic search (vector + hybrid)
+- Knowledge graph queries
+- RAG-powered conversations
+- Multi-tenant filtering
+- Context-aware results
 
-- [Slack audio alerts](https://www.graphlit.com/blog/slack-audio-alerts)
-- [AI-generated podcasts](https://www.graphlit.com/blog/gpt-to-audio)
-- [GPT-4 Vision for image analysis](https://www.graphlit.com/blog/multimodal-content-publishing)
-- [LLM tools for data extraction](https://www.graphlit.com/blog/address-extraction)
-- [Reddit market intelligence with LLM](https://www.graphlit.com/blog/exploring-market-intelligence-data-with-llms)
+### 🤖 Best-in-Class LLM Support
+**OpenAI** • **Anthropic** • **Google** • **xAI** • **Deepseek** • **Groq** • **Mistral** • **Cohere** • **Cerebras** • **AWS Bedrock**
 
-### Try one of our sample applications
+All models support tool calling, streaming, and reasoning modes.
 
-- [Upload and Chat with Files, with Citations](https://graphlit-samples-chat-file-citations.streamlit.app/)
-- [Extract Website Topics](https://graphlit-samples-extract-website-topics.streamlit.app/)
-- [Publish GitHub Issues Report](https://graphlit-samples-publish-issues-feed.streamlit.app/)
+---
 
-All sample applications can be found in our [GitHub Repo](https://github.com/graphlit/graphlit-samples).
+## 🔌 MCP-Native Integration
 
-🔥 Get started with our [API documentation](https://docs.graphlit.dev/).
+Connect Graphlit to your favorite AI coding tools:
 
-🆕 See our [changelog](https://changelog.graphlit.dev/) for all the latest features.
+**Cursor** • **VS Code** • **Windsurf** • **Claude Desktop** • **Claude Code** • **ChatGPT**
 
+```bash
+npx -y graphlit-mcp-server
+```
 
-We want to learn how we can help you build your AI apps faster with Graphlit.
+[Learn more →](https://github.com/graphlit/graphlit-mcp-server)
+
+---
+
+## 🛠️ SDKs & Resources
+
+### Official SDKs
+- [**TypeScript/JavaScript**](https://github.com/graphlit/graphlit-client-typescript) – `npm install graphlit-client`
+- [**Python**](https://github.com/graphlit/graphlit-client-python) – `pip install graphlit-client`
+- [**C# / .NET**](https://github.com/graphlit/graphlit-client-dotnet) – `dotnet add package Graphlit.Client`
+
+### Documentation & Learning
+- 📖 [**Documentation**](https://docs.graphlit.dev) – Complete API reference and guides
+- 🎥 [**YouTube Channel**](https://www.youtube.com/@graphlit) – Video tutorials and demos
+- 💬 [**Discord Community**](https://discord.gg/ygFmfjy3Qx) – Get help and share ideas
+- 🌐 [**Website**](https://www.graphlit.com) – Platform overview and pricing
+
+### Sample Applications
+- [**Sample Apps**](https://github.com/graphlit/graphlit-samples) – Production-ready examples
+- [**MCP Server**](https://github.com/graphlit/graphlit-mcp-server) – Model Context Protocol integration
+
+---
+
+## 🚀 Get Started
+
+**Free tier includes:**
+- ✓ 1GB storage • 1K content items • 3 feeds • 100 conversations
+- ✓ All content types (PDFs, audio, video, web pages)
+- ✓ Full API access
+- ✓ Community support
+
+[**Start building in 5 minutes →**](https://portal.graphlit.dev/)
+
+No credit card required. No infrastructure to manage.
+
+---
+
+## 💡 Use Cases
+
+- **AI Agents & Copilots** – Give your AI memory and context
+- **Knowledge Management** – Build searchable repositories from unstructured data
+- **Document Intelligence** – Extract insights from PDFs, reports, contracts
+- **Customer Support** – RAG-powered chatbots over your documentation
+- **Research Tools** – Semantic search across academic papers, articles
+- **Media Analysis** – Transcribe and analyze audio/video content
+- **Content Platforms** – Automated ETL for LLM training data
+
+---
+
+## 🏢 Production-Ready
+
+- **Multi-tenant** architecture with RBAC
+- **Encrypted at rest** and in transit
+- **Usage-based pricing** – pay only for what you use
+- **Serverless** – no infrastructure to deploy
+- **SOC 2 & SLA** available on Growth tier (Coming Soon)
+
+---
+
+<div align="center">
+
+### Ready to give your AI semantic memory?
+
+[**Get Started Free**](https://portal.graphlit.dev/) • [**Read the Docs**](https://docs.graphlit.dev) • [**Join Discord**](https://discord.gg/ygFmfjy3Qx)
+
+**Built by developers, for developers.** 🚀
+
+</div>
