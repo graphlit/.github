@@ -1,4 +1,4 @@
-# 🧠 Graphlit – The semantic memory platform for AI
+# 🧠 Graphlit – The context layer for AI agents
 
 **Context engineering for developers.**
 
